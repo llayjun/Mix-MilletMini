@@ -1,0 +1,5 @@
+<view class='main_recommend'>
+  <image class='main_recommend_image' src="{{ imageUrl }}"></image>
+  <view class='main_recommend_title'>{{ title }}</view>
+  <view class='main_recommend_content'>{{ content }}</view>
+</view>

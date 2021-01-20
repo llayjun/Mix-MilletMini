@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "merchantTask": "../common/merchant_task/merchant_task"
+  },
+  "navigationBarTitleText": "企业详情"
+}

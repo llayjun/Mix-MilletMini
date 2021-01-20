@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "merchantRe": "../common/merchant/recom_merchant",
+    "footer": "../common/foot/foot"
+  },
+  "navigationBarTitleText": "企业",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

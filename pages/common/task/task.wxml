@@ -1,0 +1,13 @@
+<view class='task-root'>
+  <image class='task-image' src="{{ imageUrlTask }}" mode="aspectFill"></image>
+  <view class="task-right-view">
+    <view class='task-title'>{{ title }}</view>
+    <view class='task-content'>
+      <text class="content-text">{{content}}</text>
+    </view>
+    <view class="task-bottom-view">
+      <text style="font-size: 20rpx;color: #666666;">{{ merchantName }}</text>
+      <text style="color: #e40d0d; margin: 0 10rpx;font-size: 20rpx;">￥{{ money }}</text>
+    </view>
+  </view>
+</view>

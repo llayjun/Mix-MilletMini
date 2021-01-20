@@ -1,0 +1,11 @@
+<!--work.wxml-->
+<view class="container" style="padding: 0 10rpx;">
+  <view style="height: 100vh">
+    <view class="view-container">
+      <view class="item-container" wx:for="{{recommendMerchantList}}" wx:key="key">
+        <merchantRe rootWidth="45vw" imageUrlMer="{{item.merchantLogo}}" title="{{item.merchantName}}" content="累计{{item.merchantTaskNum}}个任务"></merchantRe>
+      </view>
+    </view>
+  </view>
+  <footer isHideLoadMore="{{isHideLoadMore}}"></footer>
+</view>

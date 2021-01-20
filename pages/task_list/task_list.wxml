@@ -1,0 +1,11 @@
+<!--find.wxml-->
+<view class="container" style="padding: 0 10rpx;">
+  <view style="height: 100vh">
+    <view class="view-container">
+      <view wx:for="{{recomTask}}" wx:key="key">
+        <taskItem imageUrlTask="{{item.merchantLogo}}" title="{{item.merchantTaskName}}" content="{{item.merchantTaskDesc}}" merchantName="{{item.merchantName}}" money="{{item.merchantTaskUnitPrice}}"></taskItem>
+      </view>
+    </view>
+  </view>
+  <footer isHideLoadMore="{{isHideLoadMore}}"></footer>
+</view>

@@ -1,0 +1,62 @@
+/**my.wxss**/
+.background-image {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.root-view {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.top-view {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-view {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding: 40rpx 20rpx;
+}
+
+.header-view image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100rpx;
+}
+
+.header-view view {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-info-view {
+  position: absolute;
+  background-color: #ffffff;
+  height: 200rpx;
+  border-radius: 20rpx;
+  top: 310rpx;
+  left: 20rpx;
+  right: 20rpx;
+  bottom: 0rpx;
+  border: 3rpx solid #f6f6f6;
+}
+
+.top-info-item-view {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+}
+

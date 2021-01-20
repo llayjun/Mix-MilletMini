@@ -1,0 +1,18 @@
+<!--login.wxml-->
+<view class="container">
+  <view class="login_view">
+    <view style="margin-top:{{ topMargin }}rpx;"/>
+    <text class="top_text">手机快捷登录</text>
+    <view style="height:20rpx"/>
+    <text class="second_text">未注册过的手机号将自动创建账号</text>
+    <view style="height:100rpx"/>
+    <input class="login-input" auto-focus placeholder="请输入账号" bindinput="userNameInput"/>
+    <input class="login-input" auto-focus placeholder="请输入密码" bindinput="passWordInput"/>
+    <checkbox-group bindchange="checkboxChange" style="margin-top: 50rpx;">
+      <label class="check-label">
+        <checkbox class="check-box" value="cb" checked="{{ isCheck }}"/>我已阅读并同意《蓝吧社区隐私政策》及《蓝吧社区用户服务协议》
+      </label>
+    </checkbox-group>
+    <button style="width:100%" class="login-button" type="primary" bindtap="bindHomeTap">立即登录</button>
+  </view>
+</view>

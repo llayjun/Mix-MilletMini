@@ -1,0 +1,42 @@
+/**login.wxss**/
+.login_view {
+  padding: 0 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.register_button {
+  text-align: end;
+  color: #000000;
+  font-size: 30rpx;
+}
+
+.top_text {
+  margin-top: 100rpx;
+  color: #000000;
+  font-size: 40rpx;
+}
+
+.second_text {
+  color: #b6b4b4;
+  font-size: 30rpx;
+}
+
+.login-input {
+  font-size: 35rpx;
+  border-bottom: 1px solid #ebebeb;
+  margin-top: 40rpx;
+}
+
+.check-label {
+  font-size: 25rpx;
+}
+
+.check-box {
+  transform: scale(0.6,0.6);
+}
+
+.login-button {
+  margin-top: 50rpx;
+  width: 100%;
+}

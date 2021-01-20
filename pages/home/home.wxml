@@ -1,0 +1,61 @@
+<!--home.wxml-->
+<view class="container">
+  <!-- 顶部 -->
+  <view style="height: {{ 500 + topMargin }}rpx">
+    <image class="background-image" style="height: {{ 500 + topMargin }}rpx" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=314202116,1401007204&fm=26&gp=0.jpg"/>
+    <view class="root-view" style="height: {{ 500 + topMargin }}rpx">
+      <view style="margin-top:{{ topMargin }}rpx;"/>
+      <view class="top-view">
+        <text class="iconfont icon-jingzhundingwei" style="color: #ffffff; margin: 0 10rpx;font-size: 30rpx;">苏州</text>
+        <input class="search-input" auto-focus placeholder="搜索职位名称"/>
+        <text style="color: #ffffff; margin: 0 10rpx;font-size: 30rpx;">我的文章</text>
+      </view>
+      <view class="swipper-view">
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}" wx:key="key">
+            <swiper-item>
+              <image src="{{item.imageUrl}}"/>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+  </view>
+  <!-- 中间推荐优质任务 -->
+  <view class="recommend-view">
+    <navigator url="/pages/task_list/task_list" open-type='navigate'>
+      <mainRe imageUrl="/img/home/ic_top_1.png" title="优质任务" content="各种高质量的任务"></mainRe>
+    </navigator>
+    <navigator url="/pages/merchant_list/merchant_list" open-type='navigate'>
+      <mainRe imageUrl="/img/home/ic_top_2.png" title="高薪兼职" content="有着丰厚回报"></mainRe>
+    </navigator>
+    <navigator url="/pages/task_list/task_list" open-type='navigate'>
+      <mainRe imageUrl="/img/home/ic_top_3.png" title="企业任务" content="合作企业发布的任务"></mainRe>
+    </navigator>
+  </view>
+  <!-- 推荐企业 -->
+  <view class="title-view">
+      <text style="font-size: 30rpx;padding: 20rpx;">推荐企业</text>
+      <navigator url="/pages/merchant_list/merchant_list" open-type='navigate'>
+        <text style="font-size: 20rpx;padding: 20rpx;color: #666666;">查看更多</text>
+      </navigator>
+  </view>
+  <scroll-view scroll-x class="scroll-x">
+    <view wx:for="{{recomMerchant}}" wx:key="key" class="view-parent">
+      <view style="margin: 10rpx">
+        <merchantRe rootWidth="220rpx" imageUrlMer="{{item.merchantLogo}}" title="{{item.merchantName}}" content="累计{{item.merchantTaskNum}}个任务"></merchantRe>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 推荐任务 -->
+  <view class="title-view">
+    <text style="font-size: 30rpx;padding: 20rpx;">推荐任务</text>
+    <navigator url="/pages/task_list/task_list" open-type='navigate'>
+      <text style="font-size: 20rpx;padding: 20rpx;color: #666666;">查看更多</text>
+    </navigator>
+  </view>
+  <view wx:for="{{recomTask}}" wx:key="key">
+    <taskItem imageUrlTask="{{item.merchantLogo}}" title="{{item.merchantTaskName}}" content="{{item.merchantTaskDesc}}" merchantName="{{item.merchantName}}" money="{{item.merchantTaskUnitPrice}}"></taskItem>
+  </view>
+
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mainRe": "../common/main/main_recommend", 
+    "merchantRe": "../common/merchant/recom_merchant",
+    "taskItem": "../common/task/task"
+  },
+  "navigationStyle": "custom"
+}

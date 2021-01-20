@@ -1,0 +1,36 @@
+.main_recommend_merchant {
+  height: 220rpx;
+  background-color: #f8f8f8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.main_recommend_white {
+  width: 80rpx;
+  height: 80rpx;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.main_recommend_merchant_image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.main_recommend_merchant_title {
+  font-size: 25rpx;
+  color: #000000;
+  margin-top: 10rpx;
+}
+
+.main_recommend_merchant_content {
+  font-size: 20rpx;
+  color: #cac9c9;
+  margin-top: 10rpx;
+}

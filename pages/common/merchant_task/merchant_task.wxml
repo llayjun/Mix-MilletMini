@@ -1,0 +1,11 @@
+<view class='task-root'>
+  <veiw class="left-view">
+    <text style="font-size: 25rpx; color: #333333;">{{title}}</text>
+    <text style="font-size: 23rpx; color: #666666;">{{time}}</text>
+  </veiw>
+
+  <view class="right-view">
+    <text style="font-size: 23rpx; color: #666666;">{{location}}</text>
+    <text style="font-size: 23rpx; color: #CD0000;">{{money}}</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "myItem": "../common/my_item/my_item"
+  },
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": false
+}

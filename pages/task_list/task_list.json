@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "taskItem": "../common/task/task",
+    "footer": "../common/foot/foot"
+  },
+  "navigationBarTitleText": "任务",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 50
+}

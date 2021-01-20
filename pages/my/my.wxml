@@ -1,0 +1,48 @@
+<!--my.wxml-->
+<view class="container">
+  <!-- 顶部 -->
+  <view style="height: {{ 350 + topMargin }}rpx">
+    <image class="background-image" style="height: {{ 350 + topMargin }}rpx" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2588111137,2818876915&fm=26&gp=0.jpg"/>
+    <view class="root-view" style="height: {{ 350 + topMargin }}rpx">
+      <view style="margin-top:{{ topMargin }}rpx;"/>
+      <view class="top-view">
+        <text class="iconfont icon-jingzhundingwei" style="color: #ffffff; margin: 0 20rpx;font-size: 30rpx;">切换角色</text>
+      </view>
+      <view class="header-view">
+        <image src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3363295869,2467511306&fm=26&gp=0.jpg"></image>
+        <view>
+          <text style="font-size: 30rpx;color: #ffffff;">蓝吧新人</text>
+          <text style="font-size: 25rpx;color: #ffffff;">查看并编辑个人资料</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 实名信息... -->
+  <view class="top-info-view">
+      <view class="top-info-item-view">
+        <view wx:for="{{myTopImageList}}" wx:key="key"> 
+          <myItem imageUrl="/img/my/{{item.imageId}}.png" title="{{item.name}}"></myItem>
+        </view>
+      </view>
+  </view>
+  <view style="height: 150rpx"></view>
+  <!-- 我的任务 -->
+  <view style="display: flex;flex-direction: row;align-items: flex-end;">
+    <text style="font-size: 35rpx;padding: 20rpx;">我的任务</text>
+    <text style="font-size: 25rpx;padding: 20rpx;color: #999999;"> | 赶快去做任务赚钱</text>
+  </view>
+  <view style="display: flex;flex-direction: row; width: 100vw; justify-content: space-around;">
+    <view wx:for="{{myTaskImageList}}" wx:key="key"> 
+      <myItem imageUrl="/img/my/{{item.imageId}}.png" title="{{item.name}}"></myItem>
+    </view>
+  </view>
+  
+  <!-- 帮助中心 -->
+  <view style="height: 20rpx; background-color: #f8f8f8;"></view>
+  <text style="font-size: 35rpx;padding: 20rpx;">帮助中心</text>
+  <view style="display: flex;flex-direction: row; width: 100vw; justify-content: space-around;">
+    <view wx:for="{{myHelpImageList}}" wx:key="key"> 
+      <myItem imageUrl="/img/my/{{item.imageId}}.png" title="{{item.name}}" bindtap="loginOut" data-index="{{index}}"></myItem>
+    </view>
+  </view>
+</view>

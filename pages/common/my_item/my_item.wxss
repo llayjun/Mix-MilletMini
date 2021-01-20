@@ -1,0 +1,18 @@
+.main_recommend {
+  height: 180rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.main_recommend_image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.main_recommend_title {
+  font-size: 25rpx;
+  color: #adadad;
+  margin-top: 15rpx;
+}
