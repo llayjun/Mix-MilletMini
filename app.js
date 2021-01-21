@@ -25,12 +25,12 @@ App({
     // 判断是否免登录
     if(token != '' && token != null) {
       wx.navigateTo({
-        url: '/pages/merchant_detail/merchant_detail',
+        url: '/pages/home/home',
         fail(ex){
           // fail can not redirectTo a tabbar page"
           console.log(ex)
           wx.switchTab({
-            url: '/pages/merchant_detail/merchant_detail',
+            url: '/pages/home/home',
           })
         }
       })

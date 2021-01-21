@@ -4,7 +4,6 @@
 var header = {
   'content-type': 'application/json',
   'authorization': wx.getStorageSync('token'),
-  'os': 'android',
   'version': '1.0.0',
   'device_token': 'ebc9f523e570ef14',
 }
@@ -80,4 +79,5 @@ function dealParams(params) {
 module.exports = {
   postRequest: post,
   getRequest: get,
+  header: header,
 }

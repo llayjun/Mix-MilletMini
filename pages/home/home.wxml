@@ -14,7 +14,7 @@
         <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
           <block wx:for="{{imgUrls}}" wx:key="key">
             <swiper-item>
-              <image src="{{item.imageUrl}}"/>
+              <image src="{{item.imageUrl}}" bindtap="preview" data-src="{{item.imageUrl}}"/>
             </swiper-item>
           </block>
         </swiper>
@@ -43,7 +43,7 @@
   <scroll-view scroll-x class="scroll-x">
     <view wx:for="{{recomMerchant}}" wx:key="key" class="view-parent">
       <view style="margin: 10rpx">
-        <merchantRe rootWidth="220rpx" imageUrlMer="{{item.merchantLogo}}" title="{{item.merchantName}}" content="累计{{item.merchantTaskNum}}个任务"></merchantRe>
+        <merchantRe bindtap="merchantClick" data-index="{{item.id}}" rootWidth="220rpx" imageUrlMer="{{item.merchantLogo}}" title="{{item.merchantName}}" content="累计{{item.merchantTaskNum}}个任务"></merchantRe>
       </view>
     </view>
   </scroll-view>
@@ -55,7 +55,7 @@
     </navigator>
   </view>
   <view wx:for="{{recomTask}}" wx:key="key">
-    <taskItem imageUrlTask="{{item.merchantLogo}}" title="{{item.merchantTaskName}}" content="{{item.merchantTaskDesc}}" merchantName="{{item.merchantName}}" money="{{item.merchantTaskUnitPrice}}"></taskItem>
+    <taskItem bindtap="taskClick" data-id="{{item.id}}" imageUrlTask="{{item.merchantLogo}}" title="{{item.merchantTaskName}}" content="{{item.merchantTaskDesc}}" merchantName="{{item.merchantName}}" money="{{item.merchantTaskUnitPrice}}"></taskItem>
   </view>
 
 </view>

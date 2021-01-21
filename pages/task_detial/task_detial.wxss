@@ -8,11 +8,8 @@
 }
 
 .top-view-right {
-  font-size: 16rpx;
-  background-color: #fa0202;
-  border-radius: 10rpx;
-  color: #ffffff;
-  padding: 10rpx;
+  font-size: 20rpx;
+  color: #000000;
 }
 
 .top-view-left {
@@ -39,31 +36,29 @@
   height: 120rpx;
 }
 
-.swipper-view {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 20rpx;
-  box-sizing: border-box;
-}
-
-swiper {
-  width: 100%;
-  height: 300rpx;
-}
-swiper image {
-  border-radius: 20rpx;
-  width: 100%;
-  height: 100%;
-}
-
-.view-info-base {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
+.nine-view {
+  display: -webkit-flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 15rpx 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
+
+.nine-item-view {
+  display: -webkit-flex;
+  display: flex;
+  width: 32%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 5rpx;
+}
+
+.nine-image {
+  width: 100%;
+  height: 240rpx;
+}
+
 

@@ -1,7 +1,5 @@
 {
   "pages":[
-    "pages/merchant_detail/merchant_detail",
-
     "pages/login/login",
     "pages/home/home",
     "pages/work/work",
@@ -9,6 +7,8 @@
     "pages/my/my",
     "pages/task_list/task_list",
     "pages/merchant_list/merchant_list",
+    "pages/merchant_detail/merchant_detail",
+    "pages/task_detial/task_detial",
     "pages/index/index",
     "pages/logs/logs"
   ],

@@ -1,0 +1,31 @@
+<view class="container" style="padding: 20rpx;">
+  <!-- 顶部 -->
+  <view class="top-view">
+    <view class="top-view-left">
+      <image src="{{ taskDetail.merchantLogo }}"/>
+      <view>
+        <text style="font-size: 30rpx; color: #000000; font-weight: bold;">{{taskDetail.merchantTaskName}}</text>
+        <view style="height: 5rpx"></view>
+        <text style="font-size: 20rpx; color: #FF3030;">总费用：{{taskDetail.merchantTaskUnitPrice}}</text>
+      </view>
+    </view>
+    <text class="top-view-right">{{taskDetail.taskLocation}}</text>
+  </view>
+
+  <!--  -->
+  <view style="height: 1rpx; background-color: #f8f8f8; width: 100%; margin-top: 50rpx;"></view>
+  <text class="iconfont icon-jingzhundingwei" style="color: #666666; margin: 30rpx 0;font-size: 25rpx;">  {{taskDetail.taskLocation}}</text>
+  <view style="height: 1rpx; background-color: #f8f8f8; width: 100%"></view>
+  <!--  -->
+
+  <!-- 任务描述 -->
+  <text style="font-size: 30rpx; font-weight: bold; margin-top: 50rpx;">任务描述</text>
+  <text style="font-size: 30rpx; margin-top: 10rpx; color: #666666;">{{taskDetail.merchantTaskDesc}}</text>
+
+  <!-- 九宫格图片 -->
+  <view class="nine-view">
+    <view class="nine-item-view" wx:for="{{taskDetail.taskPictureList}}" wx:key='key' style="padding: 10rpx 0;">
+      <image class="nine-image" src="{{ item.picture }}" bindtap="preview"  data-src="{{item.picture}}"/>
+    </view>
+  </view>
+</view>

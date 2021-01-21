@@ -15,6 +15,14 @@ Page({
     recomTask: [],
   },
 
+  // 点击跳转到任务详情
+  taskClick(e) {
+    var id = e.currentTarget.dataset['id']
+    wx.navigateTo({
+      url: '../task_detial/task_detial?taskId='+id
+    })
+  },
+
   // 获取列表
   getTaskList: function(refresh = true) {
     var prams = {

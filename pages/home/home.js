@@ -21,10 +21,30 @@ Page({
     duration: 500,
   },
 
-  // 点击登录
-  bindLoginTap() {
+  // 图片预览
+  preview(event) {
+    console.log(event.target.dataset.src)
+    console.log(this.data.imgUrls)
+    let currentUrl = event.target.dataset.src
+    wx.previewImage({
+      current: currentUrl, // 当前显示图片的http链接
+      urls: this.data.imgUrls.map(i => i.imageUrl) // 需要预览的图片http链接列表
+    })
+  },
+
+  // 点击跳转到企业详情
+  merchantClick(e) {
+    var id = e.currentTarget.dataset['index']
     wx.navigateTo({
-      url: '../login/login'
+      url: '../merchant_detail/merchant_detail?merchantId='+id
+    })
+  },
+
+  // 点击跳转到任务详情
+  taskClick(e) {
+    var id = e.currentTarget.dataset['id']
+    wx.navigateTo({
+      url: '../task_detial/task_detial?taskId='+id
     })
   },
 
@@ -32,6 +52,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('aaaa' + wx.getStorageSync('token'))
     // 轮播图
     http.getRequest(baseUrl + 'api/app/banner/getBannerList' , null,
           (res) => {

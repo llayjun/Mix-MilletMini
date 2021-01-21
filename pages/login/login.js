@@ -81,6 +81,7 @@ Page({
               })
             } else {
               wx.setStorageSync('token', res.data.authorization)
+              http.header['authorization'] = res.data.authorization
               wx.redirectTo({
                 url: '/pages/home/home',
                 fail(ex){

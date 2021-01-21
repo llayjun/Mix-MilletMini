@@ -14,6 +14,14 @@ Page({
     recommendMerchantList: [],
   },
 
+  // 点击跳转到企业详情
+  merchantClick(e) {
+    var id = e.currentTarget.dataset['index']
+    wx.navigateTo({
+      url: '../merchant_detail/merchant_detail?merchantId='+id
+    })
+  },
+
   // 获取列表
   getMerchantList: function(refresh = true) {
     var prams = {

@@ -1,4 +1,3 @@
-// work.js
 var http = require('../../utils/httputils.js')
 const baseUrl = require('../const/config.js').baseUrl
 // 获取应用实例
@@ -10,40 +9,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    index: 1,
-    isHideLoadMore: false,
-    recomTask: [],
+    taskDetail: null,
   },
 
-  // 点击跳转到任务详情
-  taskClick(e) {
-    var id = e.currentTarget.dataset['id']
-    wx.navigateTo({
-      url: '../task_detial/task_detial?taskId='+id
+  // 图片预览
+  preview(event) {
+    console.log(event.target.dataset.src)
+    console.log(this.data.taskDetail.taskPictureList)
+    let currentUrl = event.target.dataset.src
+    wx.previewImage({
+      current: currentUrl, // 当前显示图片的http链接
+      urls: this.data.taskDetail.taskPictureList.map(i => i.picture) // 需要预览的图片http链接列表
     })
   },
 
   // 获取列表
-  getTaskList: function(refresh = true) {
+  getTaskDetial: function(taskId) {
     var prams = {
-      pageNum: this.data.index,
-      pageSize: 10
+      merchantTaskId: taskId,
     }
-    http.postRequest(baseUrl + 'api/app/task/getMerchantTaskListPage' , prams,
+    http.postRequest(baseUrl + 'api/app/task/getMerchantTaskDetail' , prams,
           (res) => {
             if(res.code == 0) {
               this.setData({
-                recomTask: this.data.recomTask.concat(res.data.records),
+                taskDetail: res.data
               })
             }
-            wx.stopPullDownRefresh()
           },
           (err) => {
             wx.showToast({
               title: '发生错误',
               icon: 'none',
             })
-            wx.stopPullDownRefresh()
           }
     )
   },
@@ -52,7 +49,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getTaskList()
+    this.getTaskDetial(options.taskId)
   },
 
   /**
@@ -87,20 +84,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.data.index = 1
-    this.data.recomTask = []
-    this.getTaskList()
+    
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    ++this.data.index 
-    this.getTaskList(false)
-    this.setData({
-      isHideLoadMore: true
-    })
+    
   },
 
   /**
